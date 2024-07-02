@@ -1,5 +1,6 @@
 import { Avatar, Accordion } from "@mantine/core";
 import classes from "./../styles/setup.module.css";
+import { MdEdit } from "react-icons/md";
 
 export default function Setup() {
   const data = [
@@ -45,9 +46,26 @@ export default function Setup() {
           <p className="font-semibold text-gray-400">
             How will this be scored?
           </p>
+
           <div className="border-2 rounded-xl my-4 p-4">
-            <p className="font-semibold text-gray-500 mb-4">{item.question} </p>
-            <p>{item.textContent}</p>
+            <div className="flex flex-row justify-between">
+              <p className="font-semibold text-gray-500 mb-4">
+                {item.question}{" "}
+              </p>
+              <p                
+                onClick={() => {
+                  const answer = document.getElementById(`answer${item.title}`);
+                  if (answer) {
+                    answer.contentEditable = "true";
+                    answer.focus();
+                  }
+                }}
+                className="text-purple-600 bg-[#f5f7ff] flex flex-row h-full items-center justify-center border gap-2 px-4 rounded-md hover:cursor-pointer"
+              >
+               <MdEdit className="text-purple-600 p-0 leading-[50%]" size={12}/> Edit
+              </p>
+            </div>
+            <pre id={`answer${item.title}`}>{item.textContent}</pre>
           </div>
         </div>
       </Accordion.Panel>

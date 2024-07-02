@@ -1,7 +1,6 @@
 import {
   Input,
   Avatar,
-  FileInput,
   Button,
   FileButton,
   Badge,
@@ -27,9 +26,18 @@ export default function UploadSection() {
           radius={24}
           variant="filled"
         />
-        <FaRegBell size={16} />
-        <IoMoonSharp size={16} />
-        <IoInformationCircleOutline size={20} />
+        <FaRegBell
+          size={16}
+          className="text-gray-400 hover:text-black cursor-pointer"
+        />
+        <IoMoonSharp
+          size={16}
+          className="text-gray-400 hover:text-black cursor-pointer"
+        />
+        <IoInformationCircleOutline
+          size={20}
+          className="text-gray-400 hover:text-black cursor-pointer"
+        />
         <Avatar size={36} color="red" />
       </div>
       <div className="rounded-3xl shadow-md border p-6 w-full flex flex-col gap-4">
@@ -42,7 +50,7 @@ export default function UploadSection() {
           autoContrast
           size="lg"
           color="rgba(245, 247, 255, 1)"
-            classNames={{ label: "text-md" }}
+          classNames={{ label: "text-md" }}
         >
           Upload files from drive
         </Button>
@@ -50,11 +58,13 @@ export default function UploadSection() {
           {(props) => (
             <Button
               {...props}
-              leftSection={<MdOutlineCloudUpload size={20} />}
+              leftSection={
+                <MdOutlineCloudUpload className="text-blue-900" size={24} />
+              }
               color="rgba(245, 247, 255, 1)"
               autoContrast
               size="lg"
-              classNames={{label: "text-md"}}
+              classNames={{ label: "text-md text-left" }}
             >
               Upload files
             </Button>

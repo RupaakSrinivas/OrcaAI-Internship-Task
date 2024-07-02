@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Group } from "@mantine/core";
+import { Avatar, Group } from "@mantine/core";
 import { PiFilesFill } from "react-icons/pi";
 import { MdDashboard } from "react-icons/md";
 import { IoHome } from "react-icons/io5";
@@ -42,10 +42,13 @@ export default function Sidebar() {
         {links}
       </div>
       <div className={classes.footer}>
-        {/* <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <IconLogout className={classes.linkIcon} stroke={1.5} />
-          <span>Logout</span>
-        </a> */}
+        <div className="flex flex-row gap-4 items-center">
+            <Avatar size={36} color="red" />
+            <div className="flex flex-col">
+                <p className="font-semibold text-blue-900 ">Adela Parkson</p>
+                <p className="text-xs text-gray-400">Manager</p>
+            </div>
+        </div>
       </div>
     </nav>
   );
