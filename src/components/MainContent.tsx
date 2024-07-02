@@ -18,7 +18,7 @@ export default function MainContent() {
   ));
 
   return (
-    <div className="h-full w-full ">
+    <div className="h-full w-full">
       <h1 className="text-blue-800 my-4 text-3xl font-bold">
         Analyse the calls for Soft Skills Coaching
       </h1>
@@ -30,8 +30,8 @@ export default function MainContent() {
       >
         {items}
       </Accordion>
-      <div className="border-2 rounded-lg p-4 max-h-[500px] w-full">
-        <Tabs defaultValue="Setup">
+      <div className="border-2 rounded-2xl p-4 max-h-[500px] w-full bg-white shadow-xl">
+        <Tabs classNames={{panel: "bg-white"}} defaultValue="Setup">
           <Tabs.List>
             <Tabs.Tab value="Setup">Setup</Tabs.Tab>
             <Tabs.Tab value="Sample Output">Sample Output</Tabs.Tab>

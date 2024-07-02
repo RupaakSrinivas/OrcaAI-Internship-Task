@@ -1,6 +1,7 @@
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import MainContent from "./components/MainContent";
+import UploadSection from "./components/UploadSection";
 
 function App() {
   return (
@@ -8,8 +9,9 @@ function App() {
       <Sidebar />
       <div className="min-h-[700px] h-full  w-full flex flex-col items-start justify-start">
         <Navbar />
-        <MainContent />  
+        <MainContent />
       </div>
+      <UploadSection />
     </div>
   );
 }

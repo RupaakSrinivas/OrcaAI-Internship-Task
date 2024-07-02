@@ -55,7 +55,7 @@ export default function Setup() {
   ));
 
   return (
-    <div className=" max-h-[450px] overflow-y-auto">
+    <div className=" max-h-[450px] overflow-y-auto bg-white">
       <Accordion
         classNames={classes}
         className="my-8"
