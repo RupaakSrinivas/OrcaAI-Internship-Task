@@ -1,0 +1,6 @@
+
+.item{
+    &[data-active] {
+        background-color: var(--mantine-color-white);
+    }
+}
