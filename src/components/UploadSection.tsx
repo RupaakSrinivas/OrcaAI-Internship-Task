@@ -73,7 +73,8 @@ export default function UploadSection() {
 
         <h1 className="mt-6 font-bold text-blue-900 mb-2">Data Integrations</h1>
         <div className="w-full flex flex-row justify-between items-center">
-          <div>
+          <div className="flex flex-row items-center gap-2">
+            <img src="hubspot.svg" className="h-[20px]" />
             <h1 className="font-bold text-xl text-blue-900 mb-2">HubSpot</h1>
           </div>
           <Badge color="#f5f7ff" autoContrast radius="sm">
